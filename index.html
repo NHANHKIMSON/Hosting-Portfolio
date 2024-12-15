@@ -11,47 +11,102 @@
      <link rel="shortcut icon" href="img/myprofile.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Personal css  -->
+     <link rel="stylesheet" href="asset/css/style.css">
+
+     <!-- Aos  -->
+      <!-- <link rel="stylesheet" href="/asset/css/aos.css"> -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-dark text-light">
-    <!-- Your content will go here -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a style="font-family: Dangrek, sans-serif; font-weight: 900;" class="navbar-brand" href="#">ញ៉ាញ់ គឹមសុន</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+<body class="overflow-x-hidden">
+    <!-- Loading  -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- NAVIGATION  -->
+    <header class="position-sticky sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a style="font-family: Dangrek, sans-serif; font-weight: 900;" class="navbar-brand" href="#">ញ៉ាញ់ គឹមសុន</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Welcome Section with Carousel -->
+<section class="text-center">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="img/Beltie_web_boostrap.png" class="card-img-top d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Welcome to My Portfolio</h5>
+                            <p>I'm Kimson Nhanh, a passionate web developer!</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="img/Python_Crud_slice.png" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Explore My Projects</h5>
+                            <p>From CRUD operations to live systems, see my work in action.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="img/PHP_Crud.png" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Get in Touch</h5>
+                            <p>Feel free to contact me for collaboration or opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+                    <!-- Replace the default icon with a custom one -->
+                    <span class="custom-prev-icon">
+                        <i class="bi bi-chevron-left" style="font-size: 2rem; color: white;"></i>
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                
+                <button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+                    <!-- Replace the default icon with a custom one -->
+                    <span class="custom-next-icon">
+                        <i class="bi bi-chevron-right" style="font-size: 2rem; color: white;"></i>
+                    </span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-    </nav>
-
-    <!-- Welcome Section -->
-<section class="bg-dark text-light text-center py-5 bg-son">
-    <div class="container">
-        <h1 class="display-4">Welcome to My Portfolio</h1>
-        <p class="lead">I'm Kimson Nhanh, a passionate web developer!</p>
-        <a href="#projects" class="btn btn-primary btn-lg">See My Work</a>
     </div>
 </section>
 
 <!-- Profile Section -->
-<section id="profile" class="py-5 bg-dark">
-    <div class="container bg-dark text-light">
+<section id="profile" class="py-5">
+    <div class="container">
         <div class="row align-items-center">
             <!-- Profile Picture -->
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center" data-aos="fade-right">
                 <img src="img/myprofile.png" alt="Your Photo" class="rounded-circle img-fluid" style="max-width: 200px;">
             </div>
             <!-- Profile Details -->
-            <div class="col-md-8">
-                <h2 class="mb-3 text-light"><b>Kimson Nhanh</b></h2>
+            <div class="col-md-8" data-aos="fade-left">
+                <h2 class="mb-3"><b>Kimson Nhanh</b></h2>
                 <p class="lead">
                     Hello! I'm a web developer based in Phnom Penh, Cambodia. 
                     I specialize in creating modern, responsive websites using technologies like React, Flask, and Bootstrap.
@@ -70,13 +125,13 @@
 </section>
 
 
-<section id="education bg-dark text-light" class="py-5">
+<section id="education" class="py-5">
     <div class="container">
         <h2 class="text-center mb-4">Education</h2>
         <div class="row">
             <!-- Education Entries -->
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card bg-dark text-light h-100 shadow-lg rounded-2">
+            <div class="col-lg-6 col-md-12 mb-4" data-aos="fade-up-right">
+                <div class="card h-100 shadow-lg rounded-2">
                     <div class="card-body">
                         <h5 class="card-title">BELTEI International University</h5>
                         <p class="card-subtitle text-muted">Bachelor's in Software Engineering</p>
@@ -88,8 +143,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card bg-dark text-light h-100 shadow-lg rounded-2">
+            <div class="col-lg-6 col-md-12 mb-4" data-aos="fade-up-left">
+                <div class="card h-100 shadow-lg rounded-2">
                     <div class="card-body">
                         <h5 class="card-title">Short Course in Web Design & UX/UI Design</h5>
                         <p class="card-subtitle text-muted">Certificate of Completion in CSTAD</p>
@@ -104,8 +159,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card bg-dark text-light h-100 shadow-lg rounded-2">
+            <div class="col-lg-6 col-md-12 mb-4" data-aos="zoom-in">
+                <div class="card h-100 shadow-lg rounded-2">
                     <div class="card-body">
                         <h5 class="card-title">Certificate of Completion in Web Development</h5>
                         <p class="card-subtitle text-muted">ETEC - Education and Technology Education Center</p>
@@ -118,8 +173,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="card bg-dark text-light h-100 shadow-lg rounded-2">
+            <div class="col-lg-6 col-md-12 mb-4" data-aos="zoom-in">
+                <div class="card h-100 shadow-lg rounded-2">
                     <div class="card-body">
                         <h5 class="card-title">Short Course in C/C++ Programming</h5>
                         <p class="card-subtitle text-muted">Certificate of Completion</p>
@@ -133,24 +188,27 @@
         </div>
     </div>
 </section>
-
+<!-- About section -->
     <section id="about" class="py-5">
         <div class="container text-center">
             <h2>About Me</h2>
             <p class="lead">I specialize in web development, creating clean and responsive designs using modern technologies.</p>
         </div>
     </section>
+<!-- End About Section -->
 
-    <section id="projects" class="py-5 bg-dark">
-        <div class="container">
+
+<!-- Project Section -->
+    <section id="projects" class="py-5">
+        <div class="container" data-aos="fade-up">
             <h2 class="text-center mb-4">My Projects</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="card bg-dark text-light shadow-lg rounded-2 p-3 border-light">
-                        <img src="img/Crud_php.png" class="card-img-top" alt="Project Screenshot">
+                    <div class="card shadow-lg rounded-2 p-3 border-light">
+                        <img src="img/PHP_Crud.png" class="img-fluid" alt="Project Screenshot">
                         <div class="card-body">
                             <h5 class="card-title">Crud PHP Operation</h5>
-                            <p class="card-text">A detailed description of the project and what it does.</p>
+                            <p class="card-text">Crud Operation using PHP MySQL for Database and Bootstrap responsive design.</p>
                             <a href="https://your-live-demo-url.com" class="btn btn-success btn-sm" target="_blank" disabled style="pointer-events: none; opacity: 0.6;">
                                 View Live Demo
                             </a>
@@ -161,11 +219,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card bg-dark text-light shadow-lg rounded-2 p-3 border-light">
-                        <img src="img/Beltei.png" class="card-img-top" alt="Project Screenshot">
+                    <div class="card shadow-lg rounded-2 p-3 border-light">
+                        <img src="img/Beltie_web_boostrap.png" class="img-fluid" alt="Project Screenshot">
                         <div class="card-body">
                             <h5 class="card-title">My Live Project</h5>
-                            <p class="card-text">A detailed description of the project and what it does.</p>
+                            <p class="card-text">Front-End Project using Html Css JavaScript and Bootstrap for responsive design.</p>
                             <a href="https://betei-education.vercel.app/" class="btn btn-success btn-sm" target="_blank">
                                 View Live Demo
                             </a>
@@ -179,11 +237,11 @@
             </div>
             <div class="row g-4 my-3">
                 <div class="col-md-6">
-                    <div class="card bg-dark text-light p-3 border-light">
-                        <img src="img/Screenshot 2024-12-08 at 8.01.57 PM.png" class="card-img-top" alt="Project Screenshot">
+                    <div class="card p-3 shadow-lg rounded-2">
+                        <img src="img/Python_Crud_slice.png" class="img-fluid" alt="Project Screenshot">
                         <div class="card-body">
                             <h5 class="card-title">School System Python PostgresSQL</h5>
-                            <p class="card-text">This is a web app that I was created by python with postgresSQL and render webservice to deploy it. </p>
+                            <p class="card-text">This is a web app that I was created by python with postgresSQL. </p>
                             <a href="https://cambodiaschoolsystem.onrender.com/?added=True" class="btn btn-success btn-sm" target="_blank">
                                 View Live Demo
                             </a>
@@ -193,9 +251,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card bg-dark text-light shadow-lg rounded-2 border-light p-3">
-                        <img src="img/Beltei.png" class="card-img-top" alt="Project Screenshot">
+                <!-- <div class="col-md-6">
+                    <div class="card shadow-lg rounded-2 border-light p-3">
+                        <img src="img/Beltei.png" class="img-fluid" alt="Project Screenshot">
                         <div class="card-body">
                             <h5 class="card-title">My Live Project</h5>
                             <p class="card-text">A detailed description of the project and what it does.</p>
@@ -207,7 +265,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Add more project cards here -->
             </div>
 
@@ -216,8 +274,8 @@
 
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST" class="row g-3">
+            <h2 class="text-center mb-4" data-aos="fade-down-right">Contact Me</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="row g-3" data-aos="fade-up-left">
                 <div class="col-md-6">
                     <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                 </div>
@@ -234,49 +292,54 @@
         </div>
     </section>
 
-    <footer class="bg-black text-white text-center py-4">
+    <footer class="text-center py-4">
         <div class="container">
             <!-- Social Links -->
             <div class="row mb-3">
-                <div class="col-md-6">
-                    <h5>Follow Me</h5>
+                <div class="col-md-6" data-aos="zoom-in-up">
+                    <h5 class="text-center">Follow Me</h5>
                     <ul class="list-unstyled d-flex justify-content-center">
                         <li class="mx-2">
-                            <a href="#" class="text-white text-decoration-none">
-                                <i class="bi bi-facebook"></i> Facebook
+                            <a title="Facebook" href="#" class="text-decoration-none">
+                                <i class="bi bi-facebook"></i>
                             </a>
                         </li>
                         <li class="mx-2">
-                            <a href="#" class="text-white text-decoration-none">
-                                <i class="bi bi-youtube"></i> YouTube
+                            <a title="YouTube" href="#" class="text-decoration-none">
+                                <i class="bi bi-youtube"></i>
                             </a>
                         </li>
                         <li class="mx-2">
-                            <a href="#" class="text-white text-decoration-none">
-                                <i class="bi bi-github"></i> GitHub
+                            <a title="GitHub" href="#" class="text-decoration-none">
+                                <i class="bi bi-github"></i>
                             </a>
                         </li>
                         <li class="mx-2">
-                            <a href="#" class="text-white text-decoration-none">
-                                <i class="bi bi-linkedin"></i> LinkedIn
+                            <a title="LinkedIn" href="#" class="text-decoration-none">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="mx-2">
+                            <a title="Telegram" href="#" class="text-decoration-none">
+                                <i class="bi bi-telegram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <!-- Navigation Links -->
-                <div class="col-md-6">
-                    <h5>Quick Links</h5>
+                <div class="col-md-6 text-center" data-aos="zoom-in">
+                    <h5 class="text-center">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#profile" class="text-white text-decoration-none">Profile</a></li>
-                        <li><a href="#education" class="text-white text-decoration-none">Education</a></li>
-                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
-                        <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#profile" class="text-decoration-none">Profile</a></li>
+                        <li><a href="#education" class="text-decoration-none">Education</a></li>
+                        <li><a href="#about" class="text-decoration-none">About</a></li>
+                        <li><a href="#projects" class="text-decoration-none">Projects</a></li>
+                        <li><a href="#contact" class="text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <!-- Footer Bottom -->
-            <hr class="bg-light">
+            <hr>
             <p class="mb-0">&copy; 2024 Design By Nhanh kimson. All Rights Reserved.</p>
         </div>
         <a href="#"><i class="bi bi-arrow-up btn btn-primary position-sticky" style="bottom: 20px;"></i></a>
@@ -284,5 +347,15 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.mxxin.js"></script> -->
      <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+     <!-- Aos  -->
+
+     <script src="/asset/js/aos.js"></script>
+
+     <script>
+        AOS.init();
+      </script>
+
+      <script src="asset/js/script.js"></script>
 </body>
 </html>
